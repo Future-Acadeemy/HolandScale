@@ -1,13 +1,14 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { skillMapping } from "../data/Questions";
 
 export const useSurveyStore = create(
   persist(
     (set, get) => ({
       phone: "",
-      answers: [], // flat array instead of sections
-      scores: {}, // per-section or overall
-      totalResult: null, // store overall stress result
+      answers: [], // array of numbers
+      scores: {}, // per skill
+      totalResult: null,
       showResult: false,
 
       setPhone: (phone) => set({ phone }),
@@ -21,20 +22,34 @@ export const useSurveyStore = create(
 
       updateScores: () =>
         set((state) => {
-          const totalScore = state.answers.reduce(
-            (sum, score) => sum + (score || 0),
-            0
-          );
-
-          // classify overall stress
-          const classifyStress = (score) => {
-            if (score > 144) return "High level of professional stress";
-            return "Moderate level of professional stress";
+          const { answers } = state;
+          const skillScores = {
+            "النمط واقعي": 0,
+            "النمط الاستكشافي": 0,
+            "النمط الفني": 0,
+            "النمط الاجتماعي": 0,
+            "نمط الريادي و القيادي": 0,
+            "النمط التقليدي": 0,
           };
 
+          answers.forEach((val, i) => {
+            const skill = skillMapping(i);
+            if (skill && val) {
+              skillScores[skill] += val;
+            }
+          });
+
+          const finalScores = {};
+          for (const [skill, total] of Object.entries(skillScores)) {
+            finalScores[skill] = {
+              score: total,
+              level: total >= 36 ? "Strong" : "Needs Improvement",
+            };
+          }
+
           return {
-            scores: { total: { score: totalScore } },
-            totalResult: classifyStress(totalScore),
+            scores: finalScores,
+            totalResult: "تم حساب النتائج",
           };
         }),
 

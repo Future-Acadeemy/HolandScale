@@ -1,150 +1,219 @@
-export const questions = {
-  A: [
-    "Works with the team to gather the necessary information about the problem.",
-    "Benefits from the expertise of subordinates in analyzing alternatives to reach appropriate solutions.",
-    "Presents multiple alternatives to the team to choose the best for solving the problem.",
-    "Involves the team in decision-making based on the desired objectives.",
-    "Encourages subordinates about the importance of their participation in decision-making.",
-    "Establishes a clear mechanism to regulate the participation of subordinates in decision-making.",
-    "Possesses the necessary skills in solving problems related to decisions.",
-    "Encourages the active participation of subordinates in decision-making.",
-    "Involves the participation of subordinates in solving problems facing the work.",
-    "Classifies information with the team according to its importance to the problem under decision.",
-  ],
-  B: [
-    "Commits to communication that supports human relations between him and the subordinates in the organization.",
-    "Chooses the appropriate means of communication to achieve the organization’s goals.",
-    "Uses multiple means of communication with subordinates.",
-    "Follows clear communication to facilitate the flow of information and help improve performance efficiency.",
-    "Uses modern communication tools in defining performance indicators in the organization.",
-    "Ensures quick communication with the team to make timely decisions.",
-    "Avoids traditional communication lines that hinder the completion of work in the organization.",
-    "Relies on modern communication methods when issuing directives.",
-    "Activates an appropriate communication system that enables understanding of the message between the sender and the receiver.",
-    "Commits to effective communication channels that support the smooth transfer of information quickly.",
-  ],
-  C: [
-    "Provides verbal praise to motivate subordinates’ behavior",
-    "Grants financial and moral incentives to enhance employees’ performance efficiency",
-    "Motivates subordinates immediately after completing the required work",
-    "Provides incentives that match the level of performance",
-    "Considers the suitability of incentives to the needs of subordinates",
-    "Avoids negative incentives such as punishment and deductions",
-    "Maintains fairness among subordinates in granting incentives",
-    "Utilizes motivation as an effective tool to achieve obedience and loyalty from subordinates",
-    "Strives to create a competitive atmosphere among subordinates through motivation",
-    "Has the ability to ensure that penalties are proportional to the incorrect behavior of subordinates",
-  ],
-  D: [
-    "Possesses multiple skills to manage conflicts among subordinates",
-    "Informs subordinates about the factors causing conflict in order to avoid them",
-    "Helps subordinates solve the problems they face",
-    "Directs subordinates’ goals to reduce conflict",
-    "Convinces conflicting parties to make concessions when the conflict escalates",
-    "Is capable of resolving disputes among conflicting parties in the organization",
-    "Applies regulations and policies to limit conflicts between subordinates",
-    "Pays attention to the complaints of conflicting parties",
-    "Collaborates with subordinates to reach acceptable decisions for resolving conflicts",
-    "Encourages a give-and-take policy to reach compromise solutions",
-  ],
-  E: [
-    "Holds meetings for important matters, not for administrative display",
-    "Defines the purpose of the meeting with precision and clarity",
-    "Provides subordinates with the meeting agenda well in advance",
-    "Ensures the preparation and documentation of meeting minutes",
-    "Ensures the necessary environment is provided for the meeting room",
-    "Possesses multiple skills for managing meetings",
-    "Gives all subordinates the freedom to express their opinions during the meeting",
-    "Engages with subordinates’ opinions during the meeting",
-    "Requests members to present their views in writing",
-    "Emphasizes distributing the meeting minutes to participants after it has been read",
-  ],
-};
+// src/data/Questions.js
 
+// Options (Part 1, 2, 3 share a 3-point scale)
 export const options = [
-  { value: 1, label: "Never applies" },
-  { value: 2, label: "Rarely applies" },
-  { value: 3, label: "Sometimes applies" },
-  { value: 4, label: "Often applies" },
-  { value: 5, label: "Always applies" },
+  { value: 3, label: "أحب / عالية / موافق" },
+  { value: 2, label: "أحب إلى حد ما / متوسطة / موافق إلى حد ما" },
+  { value: 1, label: "لا أحب / لا أجيد / غير موافق" },
 ];
 
-export const interpretations = {
-  A: [
-    "Low-level burnout",
-    "Moderate burnout",
-    "High-level burnout: Testifies to fatigue at the very idea of work, chronic fatigue, trouble sleeping, physical problems. For the MBI, as well as for most authors, “exhaustion would be the key component of the syndrome.” Unlike depression, the problems disappear outside work.",
-  ],
-  B: [
-    "Low-level burnout",
-    "Moderate burnout",
-    "High-level burnout: Rather a “dehumanization” in interpersonal relations. The notion of detachment is excessive, leading to cynicism with negative attitudes with regard to patients or colleagues, feeling of guilt, avoidance of social contacts and withdrawing into oneself. The professional blocks the empathy he can show to his patients and/or colleagues.",
-  ],
-  C: [
-    "High-level burnout",
-    "Moderate burnout",
-    "Low-level burnout: The individual assesses himself negatively, feels he is unable to move the situation forward. This component represents the demotivating effects of a difficult, repetitive situation leading to failure despite efforts. The person begins to doubt his genuine abilities to accomplish things. This aspect is a consequence of the first two.",
-  ],
-};
+// --- Full 180 Holland Vocational Interest Survey (HVIS) items ---
+// src/data/Questions.js
 
-//================================== dr. mohamed data =============================================
-export const professionalStressQuestions = {
-  questions: [
-    "I cannot solve the tasks assigned to me.",
-    "My job responsibilities and duties are unclear.",
-    "I feel useless and unable to do anything.",
-    "My colleagues hinder my ability to work.",
-    "My work interferes with my personal life.",
-    "I have little to do in my job.",
-    "I don’t know whether what I do at work is right or wrong.",
-    "Supervisors overload me with tasks.",
-    "I am isolated from others.",
-    "Work rules change constantly.",
-    "My job is not satisfying to me.",
-    "My job requires me to compromise some of my values and principles.",
-    "I am in my job unwillingly and have no other choice.",
-    "I don’t have the necessary information to perform well.",
-    "My work requires meeting conflicting demands and orders.",
-    "Work management shows favoritism and bias towards some people.",
-    "I have far too much to accomplish in too little time.",
-    "I believe my qualifications exceed the work I perform.",
-    "Supervisors do not provide me with evaluations of my work.",
-    "Others receive incentives for the work I do myself.",
-    "I feel like just a cog in the wheel of the organization I work for.",
-    "I don’t know exactly what is required of me at work.",
-    "I have few real successes.",
-    "Many people do not approve of my work.",
-    "I am unable to influence decisions related to me.",
-    "Those I work with do not understand my role at work.",
-    "I disagree with those I work with.",
-    "Administrative policies conflict with my good performance.",
-    "I am forced to work during my personal time.",
-    "My work is not difficult.",
-    "I receive the information I need to work on too late.",
-    "My work is unappreciated.",
-    "I share few common traits with those I work with.",
-    "There is no relationship between performance and success in my work.",
-    "My professional progress is less than I desire.",
-    "I do not trust the institution I work for.",
-    "I may be dismissed from my job and I cannot do anything about it.",
-    "I don’t know the purpose of my work.",
-    "I am forced to break some procedures to be able to perform my work.",
-    "Competition among individuals outweighs cooperation.",
-    "My workload is overwhelming.",
-    "Most of my time is consumed by routine work.",
-    "I do not get to know the final results of my work.",
-    "I am blamed at work for others’ mistakes.",
-    "I avoid telling people about the nature or place of my work.",
-    "My work priorities are unclear.",
-    "I am not respected at work.",
-    "My heart is not in my work.",
-  ],
-};
+export const questions = [
+  // -------- Part 1 --------
+  "إصلاح أثاث المنزل", // 1 واقعي
+  "دراسة النظريات العلمية", // 2 استكشافي
+  "العزف على آلة موسيقية", // 3 فني
+  "دراسة مقرر في العلاقات الإنسانية", // 4 اجتماعي
+  "القدرة على إقناع الآخرين", // 5 ريادي
+  "العمل الدائم في مؤسسة كبرى", // 6 تقليدي
+  "دراسة مقرر في ميكانيكا السيارات", // 7 واقعي
+  "العمل في مختبر للعلوم", // 8 استكشافي
+  "تصميم الأزياء", // 9 فني
+  "العمل مدرساً في فصول لمحو الأمية", // 10 اجتماعي
+  "بيع منتجات التأمين أو العقارات", // 11 ريادي
+  "تسجيل السجلات والبيانات", // 12 تقليدي
+  "العمل بالنجارة", // 13 واقعي
+  "إجراء الأبحاث", // 14 استكشافي
+  "كتابة قصص قصيرة", // 15 فني
+  "مساعدة ذوي الاحتياجات الخاصة", // 16 اجتماعي
+  "إدارة مشروع تجاري", // 17 ريادي
+  "استخدام الحاسوب لإدخال البيانات", // 18 تقليدي
+  "العمل كفني ميكانيكي", // 19 واقعي
+  "التجريب في الكيمياء", // 20 استكشافي
+  "تصميم اللوحات الفنية", // 21 فني
+  "التدريس في المدارس", // 22 اجتماعي
+  "إدارة فريق عمل", // 23 ريادي
+  "تنظيم الملفات والمستندات", // 24 تقليدي
+  "العمل في الكهرباء", // 25 واقعي
+  "إجراء تجارب في الفيزياء", // 26 استكشافي
+  "كتابة الشعر", // 27 فني
+  "خدمة المجتمع", // 28 اجتماعي
+  "التسويق لمنتجات جديدة", // 29 ريادي
+  "مراجعة الحسابات", // 30 تقليدي
 
-export const PersonalityOptions = [
-  { value: 1, label: "Strongly Disagree" },
-  { value: 2, label: "Disagree" },
-  { value: 3, label: "Neutral" },
-  { value: 4, label: "Agree" },
-  { value: 5, label: "Strongly Agree" },
+  // -------- Part 2 --------
+  "تشغيل المعدات الثقيلة", // 31 واقعي
+  "تحليل البيانات العلمية", // 32 استكشافي
+  "الرسم والتلوين", // 33 فني
+  "الإرشاد النفسي", // 34 اجتماعي
+  "الخطابة أمام الجمهور", // 35 ريادي
+  "العمل في مكتب إداري", // 36 تقليدي
+  "السباكة وصيانة المواسير", // 37 واقعي
+  "إجراء أبحاث في علم الأحياء", // 38 استكشافي
+  "النحت", // 39 فني
+  "تدريس الأطفال", // 40 اجتماعي
+  "التفاوض التجاري", // 41 ريادي
+  "تسجيل الملاحظات بدقة", // 42 تقليدي
+  "قيادة الشاحنات", // 43 واقعي
+  "مراجعة البحوث", // 44 استكشافي
+  "التمثيل المسرحي", // 45 فني
+  "رعاية كبار السن", // 46 اجتماعي
+  "إدارة الحملات الانتخابية", // 47 ريادي
+  "التعامل مع الملفات الإلكترونية", // 48 تقليدي
+  "صيانة الأجهزة الكهربائية", // 49 واقعي
+  "تحليل العينات المعملية", // 50 استكشافي
+  "كتابة المقالات", // 51 فني
+  "العمل كأخصائي اجتماعي", // 52 اجتماعي
+  "العمل كمدير تسويق", // 53 ريادي
+  "كتابة التقارير", // 54 تقليدي
+  "العمل في مجال الزراعة", // 55 واقعي
+  "إجراء التجارب الطبية", // 56 استكشافي
+  "التصوير الفوتوغرافي", // 57 فني
+  "التدريب المهني", // 58 اجتماعي
+  "بيع المنتجات", // 59 ريادي
+  "تنظيم الجداول الزمنية", // 60 تقليدي
+
+  // -------- Part 3 --------
+  "العمل في البناء", // 61 واقعي
+  "البحث في الرياضيات", // 62 استكشافي
+  "الرقص", // 63 فني
+  "الإرشاد التربوي", // 64 اجتماعي
+  "إدارة الشركات", // 65 ريادي
+  "الأرشفة", // 66 تقليدي
+  "إصلاح السيارات", // 67 واقعي
+  "تحليل الظواهر الطبيعية", // 68 استكشافي
+  "تأليف موسيقى", // 69 فني
+  "خدمة المرضى", // 70 اجتماعي
+  "إقناع العملاء", // 71 ريادي
+  "حفظ البيانات", // 72 تقليدي
+  "تشغيل الآلات", // 73 واقعي
+  "دراسة الفلك", // 74 استكشافي
+  "تصميم إعلانات", // 75 فني
+  "التدريب التربوي", // 76 اجتماعي
+  "القيادة في المشاريع", // 77 ريادي
+  "إدخال البيانات في الحاسب", // 78 تقليدي
+  "صيانة المعدات", // 79 واقعي
+  "تحليل التجارب", // 80 استكشافي
+  "إبداع فني", // 81 فني
+  "التعليم", // 82 اجتماعي
+  "العلاقات العامة", // 83 ريادي
+  "إدارة السجلات", // 84 تقليدي
+  "الإلكترونيات", // 85 واقعي
+  "التجريب", // 86 استكشافي
+  "التأليف المسرحي", // 87 فني
+  "رعاية الأطفال", // 88 اجتماعي
+  "التسويق", // 89 ريادي
+  "تدقيق المستندات", // 90 تقليدي
+
+  // -------- Part 4 --------
+  "النجارة", // 91 واقعي
+  "تحليل إحصائي", // 92 استكشافي
+  "تصميم ديكور داخلي", // 93 فني
+  "التدريس الجامعي", // 94 اجتماعي
+  "إدارة الحملات الإعلانية", // 95 ريادي
+  "إدارة الأرشيف", // 96 تقليدي
+  "الزراعة", // 97 واقعي
+  "إجراء بحوث علمية", // 98 استكشافي
+  "إعداد عروض مسرحية", // 99 فني
+  "خدمة الفقراء", // 100 اجتماعي
+  "إقناع المستثمرين", // 101 ريادي
+  "إعداد الفواتير", // 102 تقليدي
+  "العمل بالحدادة", // 103 واقعي
+  "تطوير برامج حاسوب", // 104 استكشافي
+  "التصميم الجرافيكي", // 105 فني
+  "التطوع في الجمعيات", // 106 اجتماعي
+  "إدارة المبيعات", // 107 ريادي
+  "إدارة الحسابات", // 108 تقليدي
+  "السباكة", // 109 واقعي
+  "التجارب المخبرية", // 110 استكشافي
+  "الإخراج السينمائي", // 111 فني
+  "التوجيه والإرشاد", // 112 اجتماعي
+  "إقناع الزبائن", // 113 ريادي
+  "تجهيز المستندات", // 114 تقليدي
+  "العمل في المصانع", // 115 واقعي
+  "دراسة العلوم الطبية", // 116 استكشافي
+  "فن النحت", // 117 فني
+  "الإشراف على الطلاب", // 118 اجتماعي
+  "التسويق الإلكتروني", // 119 ريادي
+  "التعامل مع قواعد البيانات", // 120 تقليدي
+
+  // -------- Part 5 --------
+  "قيادة المعدات الزراعية", // 121 واقعي
+  "تحليل المشكلات", // 122 استكشافي
+  "الإخراج المسرحي", // 123 فني
+  "الإرشاد العائلي", // 124 اجتماعي
+  "إدارة المشاريع", // 125 ريادي
+  "المحاسبة", // 126 تقليدي
+  "إصلاح الأجهزة المنزلية", // 127 واقعي
+  "إجراء تجارب علمية", // 128 استكشافي
+  "الرسم الكاريكاتيري", // 129 فني
+  "رعاية المرضى", // 130 اجتماعي
+  "إقناع الآخرين بالأفكار", // 131 ريادي
+  "التوثيق", // 132 تقليدي
+  "العمل في الحقول", // 133 واقعي
+  "التحليل الرياضي", // 134 استكشافي
+  "العزف الموسيقي", // 135 فني
+  "مساعدة الأطفال", // 136 اجتماعي
+  "إدارة الأعمال", // 137 ريادي
+  "إدخال السجلات", // 138 تقليدي
+  "صيانة معدات الكهرباء", // 139 واقعي
+  "إجراء البحوث الطبية", // 140 استكشافي
+  "التصوير السينمائي", // 141 فني
+  "التوجيه الدراسي", // 142 اجتماعي
+  "إقناع العملاء بالشراء", // 143 ريادي
+  "العمل بالوثائق", // 144 تقليدي
+  "صيانة الأدوات", // 145 واقعي
+  "التجارب الفيزيائية", // 146 استكشافي
+  "الرسم التشكيلي", // 147 فني
+  "التوجيه الاجتماعي", // 148 اجتماعي
+  "المبيعات", // 149 ريادي
+  "إدارة الملفات", // 150 تقليدي
+
+  // -------- Part 6 --------
+  "العمل في صيانة المباني", // 151 واقعي
+  "إجراء التحاليل", // 152 استكشافي
+  "التصميم الفني", // 153 فني
+  "خدمة الطلاب", // 154 اجتماعي
+  "إدارة المؤسسات", // 155 ريادي
+  "التنظيم الإداري", // 156 تقليدي
+  "تشغيل المعدات", // 157 واقعي
+  "تحليل البيانات الطبية", // 158 استكشافي
+  "إبداع موسيقي", // 159 فني
+  "التطوع في الأعمال الخيرية", // 160 اجتماعي
+  "العمل السياسي", // 161 ريادي
+  "مراجعة الحسابات بدقة", // 162 تقليدي
+  "العمل بالنجارة المتقدمة", // 163 واقعي
+  "إجراء بحوث علمية متقدمة", // 164 استكشافي
+  "الرسم الفني", // 165 فني
+  "تقديم الدعم الاجتماعي", // 166 اجتماعي
+  "التسويق الدولي", // 167 ريادي
+  "الأرشفة الإلكترونية", // 168 تقليدي
+  "الإلكترونيات المتقدمة", // 169 واقعي
+  "التحليل الكيمياوي", // 170 استكشافي
+  "التصوير الفني", // 171 فني
+  "التدريب العملي", // 172 اجتماعي
+  "إقناع أصحاب القرار", // 173 ريادي
+  "تنظيم البيانات", // 174 تقليدي
+  "التشييد والبناء", // 175 واقعي
+  "التجارب العلمية", // 176 استكشافي
+  "العمل الفني الإبداعي", // 177 فني
+  "الإرشاد الاجتماعي", // 178 اجتماعي
+  "إدارة الأعمال التجارية", // 179 ريادي
+  "إدارة المكاتب", // 180 تقليدي
 ];
+
+// Map each question index → skill
+// Rotates every 6 questions
+export const skillMapping = (index) => {
+  const skills = [
+    "النمط واقعي",
+    "النمط الاستكشافي",
+    "النمط الفني",
+    "النمط الاجتماعي",
+    "نمط الريادي و القيادي",
+    "النمط التقليدي",
+  ];
+  return skills[index % 6];
+};

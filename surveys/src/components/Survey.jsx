@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { professionalStressQuestions } from "../data/Questions";
-import { options } from "../data/Questions"; // reuse your existing options (Never, Once a week, etc.)
+import { questions, options } from "../data/Questions";
 import { useSurveyStore } from "../store/useSurveyStore";
 import { useNavigate } from "react-router-dom";
 import useSubmit from "../hooks/useSubmit";
@@ -57,7 +56,7 @@ const Survey = () => {
             </tr>
           </thead>
           <tbody>
-            {professionalStressQuestions.questions.map((q, index) => (
+            {questions.map((q, index) => (
               <tr key={index} className="hover:bg-gray-100">
                 <td className="border border-gray-300 px-4 py-3 text-center">
                   {t(q)}
